@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>새 메모 작성</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="app-container">
+        <h1>새 메모 작성</h1>
+
+        <form id="memo-form" method="POST" action="/save-memo">
+            
+            <div class="form-group">
+                <label for="memo-title">제목</label>
+                <input type="text" id="memo-title" name="title" placeholder="제목을 입력하세요">
+            </div>
+
+            <div class="form-group">
+                <label for="memo-content">내용</label>
+                <textarea id="memo-content" name="content" rows="10" placeholder="내용을 입력하세요..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+                메모 저장하기
+            </button>
+            
+        </form>
+
+        <a href="index.html" class="back-link">
+            &larr; 뒤로가기
+        </a>
+    </div>
+
+    </body>
+</html>
